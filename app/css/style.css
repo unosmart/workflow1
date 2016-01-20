@@ -2,7 +2,16 @@
 	margin: 0;
 	padding: 0;
 }
-html {
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+body, html {
+	width: 100%;
 	height: 100%;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -11,8 +20,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 body {
 	font-size: 14px;
 	font-family:Fira Sans, sans-serif;
-	width: 100%;
-	height: 100%;
 	background-image: url(../img/bg.png);
     background-repeat: repeat-x repeat-y;
 }
@@ -28,16 +35,34 @@ body {
 }
 
 
-/* ÿ‡ÔÍ‡
+/* √ò√†√Ø√™√†
 -----------------------------------------------------------------------------*/
 .header{
 	height: 105px;
 	background: #eff3f7;
+  position: relative;
+  margin: 0 auto;
+}
+.cssgradients .header:after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0),rgba(44,133,152,1.0), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(44,133,152,1.0), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(44,133,152,1.0), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(44,133,152,1.0), rgba(0,0,0,0)); 
+}
+.no-cssgradients .header{
+  background:#eff3f7 url('../img/educ.png')  bottom center no-repeat;
 }
 .header_content{
 max-width:1024px;
 margin:0 auto;
 }
+
 .logo{
 float:left;
 display:inline-block;
@@ -50,6 +75,89 @@ margin-right:10px;
 .logo img:last-child{
 float:right;
 }
+.logo-text{
+	position: absolute;
+	top:0;
+	left:-99999px
+}
+
+
+
+
+
+/*
+
+float: right;
+margin: 26px 86px 0 0;
+vertical-align: top;
+}
+.socbar {
+  display: inline-block;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+}
+
+.socbar-fb {
+  width: 22px;
+  height: 34px;
+  background-position: 1px 3px;  
+  display: inline-block;
+}
+
+.socbar-fb:hover {
+
+  background-position: -20px 3px;
+}
+.socbar-vk {
+  width: 28px;
+  height: 30px;
+  background-position: -190px 6px;
+}
+
+.socbar-vk:hover {
+  background-position: -216px 6px;
+}
+.socbar-twitter {
+  width: 28px;
+  height: 30px;
+  background-position: -124px 7px;
+}
+
+.socbar-twitter:hover {
+  background-position: -159px 7px;
+}
+
+.socbar-git {
+  width: 30px;
+  height: 32px;
+  background-position: -47px 5px;
+}
+
+.socbar-git:hover {
+  background-position: -87px 5px;
+}
+.circle {
+  float: left;
+  width: 42px;
+  height: 43px;
+  line-height: 1;
+  text-align: center;
+  margin: 0 13px 0 0;
+  background-color: white;
+  background-image: -webkit-linear-gradient(bottom, #e9e6e4 0%, #fbf9f9 94%, #fff 100%);
+  background-image: -o-linear-gradient(bottom, #e9e6e4 0%, #fbf9f9 94%, w#fff  100%);
+  background-image: linear-gradient(to top, #e9e6e4 0%, #fbf9f9 94%, whi#fff 100%);
+  border: 1px solid rgba(195, 194, 194, 0.27);
+  box-shadow: 0 2px 1px rgba(9, 9, 9, 0.31), 
+    inset 0 -2px 3px rgba(41, 41, 41, 0.05), inset 0 0 3px #f6f7f7;
+  border-radius: 50%;
+}
+*/
+
+
+
+
+
 .social_block{
 float:right;
 margin-top:23px;
@@ -100,7 +208,7 @@ margin-right:0px;
 
  
  
-/* “ÂÎÓ
+/* √í√•√´√Æ
 -----------------------------------------------------------------------------*/
 .content {
 	max-width:1024px;
@@ -206,7 +314,7 @@ margin-bottom:20px;
 .education ul li:first-child{
 background:url(../img/doc.png) no-repeat;
 }
-/* œÓ‰‚‡Î
+/* √è√Æ√§√¢√†√´
 -----------------------------------------------------------------------------*/
 .clear{height:0px;clear:both}
 .footer {
