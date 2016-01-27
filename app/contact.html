@@ -15,11 +15,11 @@
 <div class="wrapper">
 	<header class="header">
 	<div class="container header_content clearfix">
-			<div class="logo">
+			<div class="logo"><a href="/" title="logo">
 			<img src="img/logo.png" alt="Lofschool"/>
 			<span class="logo-text">
 			Lofschool. От мыслителя к создателю
-			</span>
+			</span></a>
 			</div>
 					<ul class="socials">
 					<li class="social-item"><a href="https://vk.com/" class="social-item-a i-vk" title="ВКонтакте">Вконтакте</a></li>
@@ -36,7 +36,7 @@
 			<aside class="right">
 			<nav class="menu">
 				<li class="menu-item"><a href="index.html" class="menu-item-a">Обо мне</a></li>
-				<li class="menu-item"><a href="#" class="menu-item-a">Мои работы</a></li>
+				<li class="menu-item"><a href="work.html" class="menu-item-a">Мои работы</a></li>
 				<li class="menu-item active-item"><a href="contact.html" class="menu-item-a">Связаться со мной</a></li>
 			</nav>
 			<section class="contacts ">
@@ -55,80 +55,46 @@
 			<div class="content-area ">
 				<section class="content-section clearfix">
 				<div class="sec-title">
-				<h1 class="sec-title-h1">Мои работы</h1>
+				<h1 class="sec-title-h1">У вас интересный проект? Напишите мне</h1>
 				</div>
 				<div class="information clearfix">
-						<ul class="work_list">
-							<li class="work_list-item">
-							 <div class="hover-img">
-							    <img src="../img/pic.jpg" alt="http://www.afishaorel.ru/" class="project-img">
-							    <div class="zoom-wrapper">
-							      <a href="http://www.afishaorel.ru/" target="_blank" class="zoom-link">www.afishaorel.ru</a>
-							    </div>
-							    </div>
-							<div class="name_item">afishaorel.ru</div>
-								<div class="description_item">Сайт рекламного агенства в Орле.</div>
-							</li>
-							
-							<li class="work_list-item">
-							 <div class="hover-img">
-							    <img src="../img/pic2.jpg" alt="http://markandmary.ru/" class="project-img">
-							    <div class="zoom-wrapper">
-							      <a href="http://markandmary.ru/" target="_blank" class="zoom-link">markandmary.ru</a>
-							    </div>
-							    </div>
-							<div class="name_item">markandmary.ru</div>
-								<div class="description_item">Сайт детской одежды Mayoral</div>
-							</li>
 
-							<li class="work_list-item">
-							 <div class="hover-img">
-							    <img src="../img/pic3.png" alt="http://trofimov-art.com/" class="project-img">
-							    <div class="zoom-wrapper">
-							      <a href="http://trofimov-art.com/" target="_blank" class="zoom-link">trofimov-art.com</a>
-							    </div>
-							  </div>
-								<div class="name_item">trofimov-art.com</div>
-								<div class="description_item">Сайт рекламного агенства в Орле.</div>
-							</li>
-							<li class="work_list-item">
-							 <div class="hover-img">
-							    <img src="../img/pic4.png" alt="http://www.afishaorel.ru/" class="project-img">
-							    <div class="zoom-wrapper">
-							      <a href="http://www.afishaorel.ru/" target="_blank" class="zoom-link">www.afishaorel.ru</a>
-							    </div>
-							  </div>
-								<div class="name_item">afishaorel.ru</div>
-								<div class="description_item">Сайт рекламного агенства в Орле.</div>
-							</li>
-							<li class="work_list-item">
-							 <div class="hover-img">
-							    <img src="../img/pic5.png" alt="http://www.afishaorel.ru/" class="project-img">
-							    <div class="zoom-wrapper">
-							      <a href="http://www.afishaorel.ru/" target="_blank" class="zoom-link">www.afishaorel.ru</a>
-							    </div>
-							  </div>
-								<div class="name_item">afishaorel.ru</div>
-								<div class="description_item">Сайт рекламного агенства в Орле.</div>
-							</li>
-							<li class="work_list-item add_work">
-							<i class="sprite-palaroid"></i>
-								<a class="add_work_link"href="#">
-									<div class="work-list-item">
-										<div class="title_work_add">Добавить проект</div>
-									</div>
-								</a>	
-							</li>		
-							<li class="work_list-item last"></li>
+				<form class="contact_form" >
 
-							<!-- <li class="work_list-item">
-								<a href="#" title="Добавить проект">
-								<div class="add_work_item">
-									<div class="add_work_item_text">Добавить проект</div>
-								</div>
-								</a>
-							</li> -->
-						</ul>
+                <fieldset class="contaner_form">
+                  <div class="contaner_form_block name_block">
+                    <label for="name" class="label">Имя</label>
+                    <input name="name" type="text" class="input" id="name" placeholder="Введите ваше Имя">
+                  </div>
+                  <div class="contaner_form_block">
+                    <label for="email" class="label">Email</label>
+                    <input name="mail" type="email" class="input" id="email" placeholder="Укажите Ваш email">
+                  </div>
+                </fieldset>
+
+                <fieldset class="contaner_form">
+                  <label for="massage" class="label">Сообщение</label>
+                  <textarea name="message" class="textarea" placeholder="Описание проекта или Ваш вопрос." id="massage"></textarea>
+                </fieldset>
+
+                <label for="captcha" class="label">Введите код, указанный на картинке</label>
+                <fieldset class="contaner_form">
+                  <div class="contaner_form_block">
+                    <div class="captcha"></div>
+                  </div>
+                  <div class="contaner_form_block">
+                    <input name="captcha" type="text" class="input" placeholder="Введите код">
+                  </div>
+                </fieldset>
+                <div class="action_form clearfix">
+                  <button class="btn btn_left" type="submit">
+                    <span class="action_form_text">Отправить</span>
+                  </button>
+                  <button class="btn btn_right" type="reset">
+                    <span class="action_form_text">Очистить</span>
+                  </button>
+                </div>
+              </form>
 				</div>
 				</section>
 
