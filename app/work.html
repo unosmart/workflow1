@@ -9,6 +9,25 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<script src='bower/modernizr/modernizr.js'></script>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
@@ -61,7 +80,7 @@
 						<ul class="work_list">
 							<li class="work_list-item">
 							 <div class="hover-img">
-							    <img src="../img/pic.jpg" alt="http://www.afishaorel.ru/" class="project-img">
+							    <img src="../upload/pic.jpg" alt="http://www.afishaorel.ru/" class="project-img">
 							    <div class="zoom-wrapper">
 							      <a href="http://www.afishaorel.ru/" target="_blank" class="zoom-link">www.afishaorel.ru</a>
 							    </div>
@@ -72,7 +91,7 @@
 							
 							<li class="work_list-item">
 							 <div class="hover-img">
-							    <img src="../img/pic2.jpg" alt="http://markandmary.ru/" class="project-img">
+							    <img src="../upload/pic2.jpg" alt="http://markandmary.ru/" class="project-img">
 							    <div class="zoom-wrapper">
 							      <a href="http://markandmary.ru/" target="_blank" class="zoom-link">markandmary.ru</a>
 							    </div>
@@ -83,7 +102,7 @@
 
 							<li class="work_list-item">
 							 <div class="hover-img">
-							    <img src="../img/pic3.png" alt="http://trofimov-art.com/" class="project-img">
+							    <img src="../upload/pic3.png" alt="http://trofimov-art.com/" class="project-img">
 							    <div class="zoom-wrapper">
 							      <a href="http://trofimov-art.com/" target="_blank" class="zoom-link">trofimov-art.com</a>
 							    </div>
@@ -93,7 +112,7 @@
 							</li>
 							<li class="work_list-item">
 							 <div class="hover-img">
-							    <img src="../img/pic4.png" alt="http://www.afishaorel.ru/" class="project-img">
+							    <img src="../upload/pic4.png" alt="http://www.afishaorel.ru/" class="project-img">
 							    <div class="zoom-wrapper">
 							      <a href="http://www.afishaorel.ru/" target="_blank" class="zoom-link">www.afishaorel.ru</a>
 							    </div>
@@ -103,7 +122,7 @@
 							</li>
 							<li class="work_list-item">
 							 <div class="hover-img">
-							    <img src="../img/pic5.png" alt="http://www.afishaorel.ru/" class="project-img">
+							    <img src="../upload/pic5.png" alt="http://www.afishaorel.ru/" class="project-img">
 							    <div class="zoom-wrapper">
 							      <a href="http://www.afishaorel.ru/" target="_blank" class="zoom-link">www.afishaorel.ru</a>
 							    </div>
@@ -113,9 +132,9 @@
 							</li>
 							<li class="work_list-item add_work">
 							<i class="sprite-palaroid"></i>
-								<a class="add_work_link"href="#">
+								<a class="add_work_link"href="#" id="add_work">
 									<div class="work-list-item">
-										<div class="title_work_add">Добавить проект</div>
+										<div class="title_work_add" >Добавить проект</div>
 									</div>
 								</a>	
 							</li>		
@@ -140,14 +159,49 @@
 </div><!-- конец .wrapper -->
 <footer class="footer">
 	<div class="container foter_content">
-	<a class="authoriz" href="#">вход</a>
+	<a class="authoriz" href="login.html">вход</a>
 	<div class="footer_copyright">©2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
 	
 	</div>
-	
+ <div id="add_work_popup" class="add_work_popup">
+<span class="title_popup">Добавление проекта</span>
+<a href="javascript:void(0)" class="b-close" title="Закрыть"></a>
+<form action="" method="post" class="form" name="add-project">
+
+        <div class="add-project-block">
+          <label for="form-work-name" class="label">Название проекта</label>
+          <input type="text" id="form-work-name" class="input" name="name" placeholder="Введите название">
+        </div>
+
+        <div class="add-project-block">
+          <label for="form-work-image" class="label">Картинка проекта</label>
+          <label for="form-work-image" class="input-file input">
+            <span class="input-text">Загрузите изображение</span>
+            <span class="input-btn">
+              <i class="icon_iCloud"></i>
+            </span>
+            <input type="file" id="form-work-image" class="input-file-hide" name="image">
+          </label>
+        </div>
+
+        <div class="add-project-block">
+          <label for="form-work-url" class="label">URL проекта</label>
+          <input type="url" id="form-work-url" class="input" name="url" placeholder="Добавьте ссылку">
+        </div>
+
+        <div class="add-project-block">
+          <label for="form-work-opisanie" class="label">Описание</label>
+          <textarea id="form-work-opisanie" class="textarea textarea-opisanie" name="description" placeholder="Пара слов о Вашем проекте"></textarea>
+        </div>
+
+        <button class="btn btn-add" type="submit"><span class="action_form_text">Добавить</span></button>
+
+      </form>
+ </div>
 </footer><!-- конец .footer -->
 <script src="bower/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
 <script src="js/main.js"></script>
+<script src="bower/bPopup/jquery.bpopup.min.js"></script>
 </body>
 </html>

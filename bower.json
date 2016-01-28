@@ -4,6 +4,7 @@
     "normalize-css": "normalize.css#~3.0.3",
     "jquery": "1.12",
     "modernizr": "2.8.3",
-    "jquery-placeholder": "2.3.1"
+    "jquery-placeholder": "2.3.1",
+    "bPopup": "bpopup#~0.11.0"
   }
 }
