@@ -836,6 +836,7 @@ list-style:none;
     background-image: -ms-linear-gradient(bottom, rgba(233,231,231,.45), rgba(251,249,249,0));
     background-image: linear-gradient(to top, rgba(233,231,231,.45), rgba(251,249,249,0));
     padding-left: 9px; 
+      line-height: 35px!important;
 }
 input[type="text"],input[type="email"],input[type="url"], textarea.textarea{
     color: #000;
@@ -1124,7 +1125,7 @@ padding-top: 39px;
     cursor: pointer;
 }
 .input-file > .input-text{
-top: 25%;
+top: 5%;
 position: absolute;
 }
 .input-file-hide{
@@ -1148,7 +1149,8 @@ background-image: url('../img/iCloud.png');
   height: 112px;
 }
 .add-project-block{
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  position:relative;
 }
 .btn-add{
 text-align: center; 
@@ -1170,4 +1172,16 @@ line-height: 30px;
   background-image: -o-linear-gradient(bottom, #3aa087, #5fdcbd);
   background-image: -ms-linear-gradient(bottom, #3aa087, #5fdcbd);
   background-image: linear-gradient(to top, #3aa087, #5fdcbd);
+}
+
+
+/*Стилизация тултипов*/
+.mytooltip{
+    font-family: 'open_sanssemibold';
+    font-size: 12px;
+    color: #86432e;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+    border: 1px solid #f19a7c;
+    border-radius: 5px;
+    background-color: #e69073;
 }

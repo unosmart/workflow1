@@ -6,8 +6,9 @@
 	<meta name="viewport" content = "width=1230, initial-scale=1.0">	
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower/qtip2/jquery.qtip.min.css">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link href="css/style.css" rel="stylesheet">
 	<script src='bower/modernizr/modernizr.js'></script>
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -132,7 +133,7 @@
 							</li>
 							<li class="work_list-item add_work">
 							<i class="sprite-palaroid"></i>
-								<a class="add_work_link"href="#" id="add_work">
+								<a class="add_work_link" href="#" id="add_work">
 									<div class="work-list-item">
 										<div class="title_work_add" >Добавить проект</div>
 									</div>
@@ -166,32 +167,37 @@
  <div id="add_work_popup" class="add_work_popup">
 <span class="title_popup">Добавление проекта</span>
 <a href="javascript:void(0)" class="b-close" title="Закрыть"></a>
-<form action="" method="post" class="form" name="add-project">
-
+<form id="add-project" role="form" class="form" name="add-project" >
+        <div class="server-responce error-mes"></div>
+        <div class="server-responce success-mes"></div>
         <div class="add-project-block">
           <label for="form-work-name" class="label">Название проекта</label>
-          <input type="text" id="form-work-name" class="input" name="name" placeholder="Введите название">
+          <input type="text" id="form-work-name" class="input" name="name" placeholder="Введите название" data-text="Введите название">
+          <div class="tooltip-box"></div>
         </div>
 
         <div class="add-project-block">
           <label for="form-work-image" class="label">Картинка проекта</label>
-          <label for="form-work-image" class="input-file input">
+          <label for="form-work-image" class="input-file input" data-pos="right" data-text="Загрузите изображение">
             <span class="input-text">Загрузите изображение</span>
             <span class="input-btn">
               <i class="icon_iCloud"></i>
             </span>
             <input type="file" id="form-work-image" class="input-file-hide" name="image">
           </label>
+          <div class="tooltip-box"></div>
         </div>
 
         <div class="add-project-block">
           <label for="form-work-url" class="label">URL проекта</label>
-          <input type="url" id="form-work-url" class="input" name="url" placeholder="Добавьте ссылку">
+          <input type="text" id="form-work-url" class="input" name="url" placeholder="Добавьте ссылку" data-text="Укажите URL проекта">
+        <div class="tooltip-box"></div>
         </div>
 
         <div class="add-project-block">
           <label for="form-work-opisanie" class="label">Описание</label>
-          <textarea id="form-work-opisanie" class="textarea textarea-opisanie" name="description" placeholder="Пара слов о Вашем проекте"></textarea>
+          <textarea id="form-work-opisanie" class="textarea textarea-opisanie" name="description" placeholder="Пара слов о Вашем проекте" data-text="Введите описание проекта"></textarea>
+        <div class="tooltip-box"></div>
         </div>
 
         <button class="btn btn-add" type="submit"><span class="action_form_text">Добавить</span></button>
@@ -201,7 +207,9 @@
 </footer><!-- конец .footer -->
 <script src="bower/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
-<script src="js/main.js"></script>
 <script src="bower/bPopup/jquery.bpopup.min.js"></script>
+<script src="bower/qtip2/jquery.qtip.min.js"></script>
+<script src="js/add_project.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
