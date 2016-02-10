@@ -46,6 +46,7 @@ var addProject = function () {
                     console.log('Ура! все прошло успешно');
                     form.find('.error-mes').hide();
                     form.find('.success-mes').text(ans.text).show();//скрываем блок если отображен другой
+                    form.find('input, textarea').val(''); //очищаем поля формы если прошел положительный ответ
                 } else {
                     console.log(ans.text);
                     form.find('.success-mes').hide();

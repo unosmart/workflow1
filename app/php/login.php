@@ -1,15 +1,13 @@
 <?php
 $data = array();
-$name = $_POST['name'];
-$image = $_POST['image'];
-$url = $_POST['url'];
-$description = $_POST['description'];
-if (($name === '') or ($image === '') or ($url === '') or ($description === '')) {
+$mail = $_POST['name'];
+$password = $_POST['password'];
+if (($name === '') or ($password === '')) {
 	$data['text'] = 'Поля не заполнены!';
 	$data['status'] = 'error';
 }else{
 	$data['status'] = 'OK';
-	$data['text'] = 'Ура! Проект успешно добавлен.';
+	$data['text'] = 'Успешная авторизация.';
 }
 header("Content-type: application/json");
 echo json_encode($data);

@@ -12,16 +12,17 @@ var contactValid = function () {
 	var addFormValid = function(e) {
 		e.preventDefault();
 		var form = $(this);
-		url = 'add_project1.php'
+		url = 'php/contact.php'
 		serverPostAnswer = _ajaxForm(form, url); //вызываем универсальный ajax запрос
 		if (serverPostAnswer) {
 			serverPostAnswer.done(function(ans) {
 				console.log(ans);
 				if (ans.status === 'OK') {
 					console.log(ans.text);
-					console.log('Ура! все прошло успешно');
+					console.log('Сообщение успешно отправлено, мы обязательно с вами свяжемся');
 					form.find('.error-mes').hide();
 					form.find('.success-mes').text(ans.text).show();//скрываем блок если отображен другой
+					form.find('input, textarea').val(''); //очищаем поля формы если прошел положительный ответ
 				} else {
 					console.log(ans.text);
 					form.find('.success-mes').hide();

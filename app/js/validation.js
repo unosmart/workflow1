@@ -93,6 +93,8 @@ var validation = function () {
             form.find('valid_error').removeClass('valid_error');
             form.find('input, textarea').trigger('hideTooltip');
             form.find('input, textarea').val('');
+            form.find('.server-responce').text('').hide(); //Очищаем блоки успешной или неуспешной отправки
+
         },
         _textUpload = function (e) {
             var str = $(this).val();

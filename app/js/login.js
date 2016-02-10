@@ -13,16 +13,17 @@ var logIn = function () {
     var loginValid = function (e) {
         e.preventDefault ? e.preventDefault() : e.returnValue = false;
         var form = $(this),
-        url = 'add_project.php',
+        url = 'php/login.php',
         serverPostAnswer = _ajaxForm(form, url); //вызываем универсальный ajax запрос
         if (serverPostAnswer) {
             serverPostAnswer.done(function (ans) {
                 console.log(ans);
                 if (ans.status === 'OK') {
                     console.log(ans.text);
-                    console.log('Ура! все прошло успешно');
+                    console.log('Успешная авторизация');
                     form.find('.error-mes').hide();
                     form.find('.success-mes').text(ans.text).show();//скрываем блок если отображен другой
+                    form.find('input, textarea').val(''); //очищаем поля формы если прошел положительный ответ
                 } else {
                     console.log(ans.text);
                     form.find('.success-mes').hide();
