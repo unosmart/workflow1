@@ -1183,5 +1183,26 @@ line-height: 30px;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
     border: 1px solid #f19a7c;
     border-radius: 5px;
-    background-color: #e69073;
+    background-color: #d58063;
+}
+.valid_error{
+border: 1px solid #d58063;
+}
+.server-responce{
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    margin-bottom: 10px;
+    position: relative;
+}
+.error-mes{
+    border: 1px solid #cb6945;
+    background: #e9c8bc;
+    color: #cb6945;
+}
+.success-mes{
+     border: 1px solid #49bb7b;
+    background: #bce1cb;
+    color: #49bb7b; 
 }

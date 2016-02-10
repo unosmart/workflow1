@@ -172,13 +172,13 @@
         <div class="server-responce success-mes"></div>
         <div class="add-project-block">
           <label for="form-work-name" class="label">Название проекта</label>
-          <input type="text" id="form-work-name" class="input" name="name" placeholder="Введите название" data-text="Введите название">
+          <input type="text" id="form-work-name" class="input required" name="name" placeholder="Введите название" data-text="Введите название">
           <div class="tooltip-box"></div>
         </div>
 
         <div class="add-project-block">
           <label for="form-work-image" class="label">Картинка проекта</label>
-          <label for="form-work-image" class="input-file input" data-pos="right" data-text="Загрузите изображение">
+          <label for="form-work-image" class="input-file input required" data-text="Загрузите изображение">
             <span class="input-text">Загрузите изображение</span>
             <span class="input-btn">
               <i class="icon_iCloud"></i>
@@ -190,13 +190,13 @@
 
         <div class="add-project-block">
           <label for="form-work-url" class="label">URL проекта</label>
-          <input type="text" id="form-work-url" class="input" name="url" placeholder="Добавьте ссылку" data-text="Укажите URL проекта">
+          <input type="text" id="form-work-url" class="input required" name="url" placeholder="Добавьте ссылку" data-text="Укажите URL проекта">
         <div class="tooltip-box"></div>
         </div>
 
         <div class="add-project-block">
           <label for="form-work-opisanie" class="label">Описание</label>
-          <textarea id="form-work-opisanie" class="textarea textarea-opisanie" name="description" placeholder="Пара слов о Вашем проекте" data-text="Введите описание проекта"></textarea>
+          <textarea id="form-work-opisanie" class="textarea textarea-opisanie required" name="description" placeholder="Пара слов о Вашем проекте" data-text="Введите описание проекта"></textarea>
         <div class="tooltip-box"></div>
         </div>
 
@@ -209,6 +209,7 @@
 <script type="text/javascript" src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
 <script src="bower/bPopup/jquery.bpopup.min.js"></script>
 <script src="bower/qtip2/jquery.qtip.min.js"></script>
+<script src="js/validation.js"></script>
 <script src="js/add_project.js"></script>
 <script src="js/main.js"></script>
 </body>

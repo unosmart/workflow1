@@ -1,4 +1,7 @@
+// Поддержка placeholder в IE8	
 $(document).ready(function(){
-	$('input,textarea').placeholder();
+	if ($('input, textarea').length) {
+        $('input, textarea').placeholder();
+   }
 });
 

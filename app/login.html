@@ -6,8 +6,9 @@
 	<meta name="viewport" content = "width=1230, initial-scale=1.0">	
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower/qtip2/jquery.qtip.min.css">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link href="css/style.css" rel="stylesheet">
 	<script src='bower/modernizr/modernizr.js'></script>
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -38,13 +39,13 @@
 		<div class="aurorization_block_title">
 		Авторизуйтесь
 		</div>
-		<form action="" method="post" class="aurorization_form" name="aurorization_form">
+		<form class="aurorization_form" name="aurorization_form">
 
         <div class="add-project-block auroriz mail">
-             <input type="text" id="form-work-mail" class="input input-icon" name="name" placeholder="Введите email">
+             <input type="text" id="form-work-mail" class="input input-icon required" name="name" placeholder="Введите email" data-text="Введите логин">
         </div>
          <div class="add-project-block auroriz key">
-             <input type="password" id="form-work-pass" class="input input-icon" name="password" placeholder="Введите пароль">
+             <input type="password" id="form-work-pass" class="input input-icon required" name="password" placeholder="Введите пароль" data-text="Введите пароль">
         </div>
 	        <div class="add-project-block auroriz">
 	       <label for="checkbox" class="label-checkbox"> <input type="checkbox" class="checkbox" id="checkbox" />
@@ -75,6 +76,9 @@
 </footer><!-- конец .footer -->
 <script src="bower/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
+<script src="bower/qtip2/jquery.qtip.min.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/login.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -6,8 +6,9 @@
 	<meta name="viewport" content = "width=1230, initial-scale=1.0">	
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower/qtip2/jquery.qtip.min.css">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link href="css/style.css" rel="stylesheet">
 	<script src='bower/modernizr/modernizr.js'></script>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -84,17 +85,17 @@
                 <fieldset class="contaner_form">
                   <div class="contaner_form_block name_block">
                     <label for="name" class="label">Имя</label>
-                    <input name="name" type="text" class="input" id="name" placeholder="Введите ваше Имя" data-text="Введите название">
+                    <input name="name" type="text" class="input required" id="name" placeholder="Введите ваше Имя" data-text="Как к вам обращаться?">
                   </div>
                   <div class="contaner_form_block">
                     <label for="email" class="label">Email</label>
-                    <input name="mail" type="email" class="input" id="email" placeholder="Укажите Ваш email">
+                    <input name="mail" type="text" class="input required" id="email" placeholder="Укажите Ваш email" data-text="Укажите email"  data-pos="right">
                   </div>
                 </fieldset>
 
                 <fieldset class="contaner_form">
                   <label for="massage" class="label">Сообщение</label>
-                  <textarea name="message" class="textarea" placeholder="Описание проекта или Ваш вопрос." id="massage"></textarea>
+                  <textarea name="message" class="textarea required" placeholder="Описание проекта или Ваш вопрос." id="massage" data-text="Введите текст сообщения"></textarea>
                 </fieldset>
 
              <!--    <label for="captcha" class="label">Введите код, указанный на картинке</label> -->
@@ -137,7 +138,8 @@
 <script src="bower/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
 <script src="bower/qtip2/jquery.qtip.min.js"></script>
-<script src="js/add_project.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/contact.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
