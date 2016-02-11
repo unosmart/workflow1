@@ -89,12 +89,13 @@ var validation = function () {
             }).trigger('show');
         },
         _clearForm = function (e) { //очищаем форму
-            var form = $(this);
+            var form = $(this),clear;
             form.find('valid_error').removeClass('valid_error');
             form.find('input, textarea').trigger('hideTooltip');
+            form.find('.file_upload').trigger('hideTooltip');
             form.find('input, textarea').val('');
             form.find('.server-responce').text('').hide(); //Очищаем блоки успешной или неуспешной отправки
-
+            $('.qtip-default').css("display","none");
         },
         _textUpload = function (e) {
             var str = $(this).val();
@@ -105,7 +106,7 @@ var validation = function () {
             var i = str.lastIndexOf('/')+1;
             }  
             var filename = str.slice(i);
-            var e = $(this).siblings('.input-text');
+            var e = $('.input-text');
             e.html(filename);
         };
     return {

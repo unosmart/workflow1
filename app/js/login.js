@@ -17,15 +17,11 @@ var logIn = function () {
         serverPostAnswer = _ajaxForm(form, url); //вызываем универсальный ajax запрос
         if (serverPostAnswer) {
             serverPostAnswer.done(function (ans) {
-                console.log(ans);
                 if (ans.status === 'OK') {
-                    console.log(ans.text);
-                    console.log('Успешная авторизация');
                     form.find('.error-mes').hide();
                     form.find('.success-mes').text(ans.text).show();//скрываем блок если отображен другой
                     form.find('input, textarea').val(''); //очищаем поля формы если прошел положительный ответ
                 } else {
-                    console.log(ans.text);
                     form.find('.success-mes').hide();
                     form.find('.error-mes').text(ans.text).show();//скрываем блок если отображен другой
                 }
@@ -44,7 +40,6 @@ var logIn = function () {
             dataType: 'json',
             data: data
         }).fail(function (){
-            console.log("Проблемы в PHP");
             form.find('.error-mes').text('На сервере произошла ошибка').show();
         });
         return result;

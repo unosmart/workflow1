@@ -17,7 +17,6 @@ var addProject = function () {
 //Вывод модального окна
     var _showModal = function (e) {
        e.preventDefault ? e.preventDefault() : e.returnValue = false;
-        console.log('Вызов окна');
         var divPopup = $('#add_work_popup'),
             form = divPopup.find('.form');
         divPopup.bPopup({
@@ -40,15 +39,11 @@ var addProject = function () {
         serverPostAnswer = _ajaxForm(form, url); //вызываем универсальный ajax запрос
         if (serverPostAnswer) {
             serverPostAnswer.done(function (ans) {
-                console.log(ans);
                 if (ans.status === 'OK') {
-                    console.log(ans.text);
-                    console.log('Ура! все прошло успешно');
                     form.find('.error-mes').hide();
                     form.find('.success-mes').text(ans.text).show();//скрываем блок если отображен другой
                     form.find('input, textarea').val(''); //очищаем поля формы если прошел положительный ответ
                 } else {
-                    console.log(ans.text);
                     form.find('.success-mes').hide();
                     form.find('.error-mes').text(ans.text).show();//скрываем блок если отображен другой
                 }
@@ -67,7 +62,6 @@ var addProject = function () {
             dataType: 'json',
             data: data
         }).fail(function (){
-            console.log("Проблемы в PHP");
             form.find('.error-mes').text('На сервере произошла ошибка, повторите отправку чуть позже.').show();
         });
         return result;
